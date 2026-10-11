@@ -108,6 +108,9 @@ h3{font-size:1.06em;font-weight:700;color:var(--ink);margin:0}
 
 .rows .head+.head{margin-top:.35em}
 .rows h3{font-weight:400;color:var(--body)}
+/* project entries in tailored copies: title links to the write-up, team or course after it */
+.sheet h3 a{color:inherit;text-decoration:none}
+.head .meta{font-weight:400;color:var(--muted);font-size:.92em}
 .nw{white-space:nowrap}
 
 /* phones: single column, dates under titles */
@@ -165,10 +168,14 @@ h3{font-size:1.06em;font-weight:700;color:var(--ink);margin:0}
   3. Click "Commit changes". The live page updates within a minute or two.
   Use Ctrl/Cmd+P (print preview) after larger additions to check that it
   still fits on one page.
+
+  Copies tailored to specific jobs live in resume/<name>/. To make one, paste
+  the job description into a Claude Code session on this repo; the steps and
+  everything known about Fred are in .claude/skills/tailor-resume/.
 -->
 
 <nav class="bar" aria-label="Page">
-  <a href="../">← Engineering project portfolio</a>
+  <a href="https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/">← Engineering project portfolio</a>
   <button type="button" onclick="window.print()">Save as PDF</button>
 </nav>
 
