@@ -34,7 +34,7 @@
      the page, and parsers read the PDF in that order. */
 :root{
   --band:#0f2238; --spark:#4da3ff;
-  --band-bg:#2a6fbd; --band-bg2:#3a7fcb;  /* the header band: a light true blue */
+  --band-bg:#1f62ad; --band-bg2:#4589d3;  /* header band: blue sweeping lighter to the right */
   --ink:#111821; --body:#262d36; --muted:#5f6873; --line:#dfe5ec;
   --accent:#1c5fa8; --tint:#e9f2fc;
   color-scheme:light}
@@ -63,7 +63,8 @@ a{color:var(--accent)}
 
 /* ── header band ── */
 header{margin:0 calc(-1 * var(--px)) 1.9em;padding:2.5em var(--px) 1.6em;color:#fff;
-       background:linear-gradient(100deg,var(--band-bg) 0%,var(--band-bg) 45%,var(--band-bg2) 100%);
+       background:radial-gradient(90% 160% at 100% 0%,rgba(255,255,255,.24) 0%,rgba(255,255,255,0) 60%),
+                  linear-gradient(100deg,var(--band-bg) 0%,var(--band-bg) 40%,var(--band-bg2) 100%);
        border-bottom:.22em solid var(--spark)}
 h1{font-size:2.9em;line-height:1;font-weight:700;letter-spacing:-.022em;color:#fff;margin:0}
 /* Each item starts with its separator; items are pulled left by one
