@@ -33,7 +33,8 @@
      holds text: Chrome writes such elements into the PDF after the rest of
      the page, and parsers read the PDF in that order. */
 :root{
-  --band:#0f2238; --band2:#173f6a; --spark:#4da3ff;
+  --band:#0f2238; --spark:#4da3ff;
+  --band-bg:#87909c; --band-bg2:#8b9fb4;  /* the header band: navy at half strength */
   --ink:#111821; --body:#262d36; --muted:#5f6873; --line:#dfe5ec;
   --accent:#1c5fa8; --tint:#e9f2fc;
   color-scheme:light}
@@ -61,21 +62,21 @@ a{color:var(--accent)}
          text-decoration-color:rgba(28,95,168,.35)}
 
 /* ── header band ── */
-header{margin:0 calc(-1 * var(--px)) 1.9em;padding:2.5em var(--px) 1.6em;color:#c9d5e3;
-       background:linear-gradient(100deg,var(--band) 0%,var(--band) 45%,var(--band2) 100%);
+header{margin:0 calc(-1 * var(--px)) 1.9em;padding:2.5em var(--px) 1.6em;color:#fff;
+       background:linear-gradient(100deg,var(--band-bg) 0%,var(--band-bg) 45%,var(--band-bg2) 100%);
        border-bottom:.22em solid var(--spark)}
 h1{font-size:2.9em;line-height:1;font-weight:700;letter-spacing:-.022em;color:#fff;margin:0}
 /* Each item starts with its separator; items are pulled left by one
    separator width and the list clips its left edge, so a separator that
    would begin a line is hidden. */
-.contact{list-style:none;margin:.85em 0 0;padding:0;display:flex;flex-wrap:wrap;overflow:hidden;font-size:.9em}
+.contact{list-style:none;margin:.85em 0 0;padding:0;display:flex;flex-wrap:wrap;overflow:hidden;font-size:.9em;font-weight:500}
 .contact li{margin-left:-1.3em;padding-right:1.3em}
-.contact li::before{content:"|";display:inline-block;width:1.3em;text-align:center;color:#5d7895}
+.contact li::before{content:"|";display:inline-block;width:1.3em;text-align:center;color:rgba(255,255,255,.55)}
 .contact li:first-child::before{visibility:hidden}
 .contact a{color:inherit;text-decoration:none}
 .contact a:hover{text-decoration:underline}
-.site{margin:.25em 0 0;font-size:.9em}
-.sheet .site a{color:#9fcbff;text-decoration-color:rgba(159,203,255,.45)}
+.site{margin:.25em 0 0;font-size:.9em;font-weight:500}
+.sheet .site a{color:#fff;text-decoration-color:rgba(255,255,255,.6)}
 
 /* ── section titles: accent square, caps, hairline ── */
 section+section{margin-top:1.45em}
