@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frederic Koran — Resume</title>
+<meta name="author" content="Frederic Koran">
+<meta name="description" content="Resume of Frederic Koran, B.Eng. Bioengineering student at McGill University: engineering experience, projects, technical skills, leadership and athletics.">
+<link rel="canonical" href="https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/resume/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Frederic Koran">
+<meta property="og:title" content="Frederic Koran — Resume">
+<meta property="og:description" content="B.Eng. Bioengineering, McGill University. Engineering experience, projects, technical skills, leadership and athletics.">
+<meta property="og:url" content="https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/resume/">
+<meta property="og:image" content="https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/resume/og-resume.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Frederic Koran, Resume">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Frederic Koran — Resume">
+<meta name="twitter:description" content="B.Eng. Bioengineering, McGill University. Engineering experience, projects, technical skills, leadership and athletics.">
+<meta name="twitter:image" content="https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/resume/og-resume.png">
+<meta name="theme-color" content="#1a2026">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a2026'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EFK%3C/text%3E%3C/svg%3E">
+<style>
+/* Every size inside .sheet is in em, so the whole resume scales from one
+   font-size: 10pt on paper, larger on screens. */
+:root{--ink:#111;--muted:#444;--rule:#1a1a1a;--link:#0a5fff;color-scheme:light}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;background:#e7e8e8;color:var(--ink);
+     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+
+/* page chrome (screen only) */
+.bar{width:min(900px,100% - 32px);margin:0 auto;padding:18px 0 14px;
+     display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:14px}
+.bar a{color:#1a2026;text-decoration:none}
+.bar a:hover{text-decoration:underline}
+.bar button{font:inherit;font-weight:600;color:#fff;background:#1a2026;border:0;border-radius:999px;
+            padding:8px 16px;cursor:pointer}
+.bar button:hover{background:#000}
+.bar button:focus-visible,.bar a:focus-visible,.sheet a:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+
+/* the resume */
+.sheet{width:min(900px,100% - 32px);margin:0 auto 48px;background:#fff;
+       padding:52px 64px 56px;font-size:15px;line-height:1.42;
+       box-shadow:0 1px 3px rgba(20,26,32,.14),0 8px 24px rgba(20,26,32,.07)}
+.sheet a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em}
+
+h1{font-size:2.4em;line-height:1.1;font-weight:700;letter-spacing:-.015em;margin:0}
+/* Each separator sits in the gap before its item; the one starting a new
+   line falls outside the list's edge and is clipped, so wraps stay clean. */
+.contact{list-style:none;margin:.3em -4px 0;padding:2px 4px;font-size:.86em;color:#333;
+         display:flex;flex-wrap:wrap;column-gap:1.3em;overflow:hidden}
+.contact li{position:relative}
+.contact li::before{content:"|";color:#c4c4c4;position:absolute;left:-.82em}
+.contact a[href^="mailto:"],.contact a[href^="tel:"]{color:inherit;text-decoration:none}
+.contact a[href^="mailto:"]:hover,.contact a[href^="tel:"]:hover{text-decoration:underline}
+
+h2{font-size:.8em;font-weight:700;text-transform:uppercase;letter-spacing:.24em;
+   margin:1.6em 0 .7em;padding-bottom:.4em;border-bottom:1px solid var(--rule)}
+.entry+.entry{margin-top:.75em}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:1em}
+h3{font-size:1.02em;font-weight:700;margin:0}
+.when{font-size:.94em;color:var(--muted);white-space:nowrap;text-align:right}
+.entry p{margin:.2em 0 0}
+.role{font-style:italic;color:var(--muted)}
+.entry ul{list-style:none;margin:.3em 0 0;padding:0}
+.entry li{position:relative;padding-left:.83em}
+.entry li+li{margin-top:.2em}
+.entry li::before{content:"·";position:absolute;left:0}
+
+.skills{display:grid;grid-template-columns:8.3em 1fr;gap:.45em 0;margin:0}
+.skills dt{font-size:.76em;font-weight:700;text-transform:uppercase;letter-spacing:.14em;padding-top:.3em}
+.skills dd{margin:0}
+
+.rows .head+.head{margin-top:.2em}
+.rows h3{font-weight:400;font-size:1em}
+.plain{margin:0}
+.nw{white-space:nowrap}
+
+/* phones: single column, dates under titles */
+@media screen and (max-width:640px){
+  body{background:#fff}
+  .bar{width:auto;padding:14px 18px 0}
+  .sheet{width:auto;margin:0;padding:22px 18px 40px;box-shadow:none;font-size:15.5px}
+  h1{font-size:2.1em}
+  .contact{margin-top:.5em;line-height:1.6}
+  .head{flex-wrap:wrap;gap:0 1em}
+  .when{text-align:left;flex-basis:100%;margin-top:.1em}
+  .rows .head+.head{margin-top:.6em}
+  .skills{grid-template-columns:1fr;gap:0}
+  .skills dt{padding-top:.9em}
+  .skills dt:first-child{padding-top:0}
+}
+
+/* print / Save as PDF: one Letter page, no chrome */
+@page{size:letter;margin:0}
+@media print{
+  body{background:#fff}
+  .bar{display:none}
+  .sheet{width:auto;margin:0;box-shadow:none;padding:.42in .62in .4in;font-size:10pt}
+  h1{font-size:2.3em}
+  header{margin-bottom:.35em}
+  h2{margin:.7em 0 .3em;padding-bottom:.3em}
+  .entry+.entry{margin-top:.55em}
+  .skills{gap:.25em 0}
+}
+</style>
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS RESUME
+  ───────────────────────
+  1. On GitHub, open resume/index.html and click the pencil icon (Edit).
+  2. Change any text between the tags. To add something, copy an existing
+     block and paste it right below:
+       · a bullet point  →  one <li>…</li> line
+       · a job or role   →  everything from <div class="entry"> to its </div>
+       · a skills row    →  one <dt>…</dt> line plus the <dd>…</dd> under it
+       · a whole section →  everything from <section> to its </section>
+  3. Click "Commit changes". The live page updates within a minute or two.
+  Use Ctrl/Cmd+P (print preview) after larger additions to check that it
+  still fits on one page.
+-->
+
+<nav class="bar" aria-label="Page">
+  <a href="../">← Engineering project portfolio</a>
+  <button type="button" onclick="window.print()">Save as PDF</button>
+</nav>
+
+<main class="sheet">
+
+  <header>
+    <h1>Frederic Koran</h1>
+    <ul class="contact">
+      <li><a href="mailto:frederic13287@icloud.com">frederic13287@icloud.com</a></li>
+      <li><a href="mailto:frederic.koran@mail.mcgill.ca">frederic.koran@mail.mcgill.ca</a></li>
+      <li><a href="tel:+14132410775">413-241-0775</a></li>
+      <li>Longmeadow, MA</li>
+      <li>Montreal, QC</li>
+      <li><a href="../">Project Portfolio</a></li>
+    </ul>
+  </header>
+
+  <!-- ═════════ EDUCATION ═════════ -->
+  <section>
+    <h2>Education</h2>
+
+    <div class="entry">
+      <div class="head"><h3>McGill University</h3><span class="when">Montreal, QC · Expected May 2028</span></div>
+      <p>B.Eng. in Bioengineering — Biomolecular &amp; Cellular Engineering</p>
+      <p>Minor in Economics · Fourth year of five · Major GPA 3.5/4.0</p>
+    </div>
+  </section>
+
+  <!-- ═════════ ENGINEERING EXPERIENCE ═════════ -->
+  <section>
+    <h2>Engineering Experience</h2>
+
+    <div class="entry">
+      <div class="head"><h3>Ruffian — TipTopSpin</h3><span class="when">2026 – Present</span></div>
+      <p class="role">Product development · Student-run engineering startup</p>
+      <ul>
+        <li>Designed and prototyped TipTopSpin, a forearm-mounted wrist trainer that resists ulnar-to-radial deviation with a rod-stabilized compression spring, preloaded by a threaded knob and slider for a 10× adjustable resistance range.</li>
+        <li>Developed mechanical concepts and CAD in Fusion 360, iterating geometry with a student engineering team to balance ergonomics, range of motion, and manufacturability.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═════════ SELECTED ENGINEERING PROJECTS ═════════ -->
+  <section>
+    <h2>Selected Engineering Projects</h2>
+
+    <div class="entry">
+      <div class="head"><h3>Bioengineering research and design projects</h3><span class="when">Full portfolio: <a href="../">view projects</a></span></div>
+      <ul>
+        <li>Projects spanning microfluidic diagnostics, bioglass implant coatings, controlled-release microbeads, computational protein design, and traction force microscopy.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═════════ TECHNICAL SKILLS ═════════ -->
+  <section>
+    <h2>Technical Skills</h2>
+
+    <dl class="skills">
+      <dt>Computation</dt>
+      <dd>MATLAB · Python · JMP (design of experiments) · AlphaFold · ImageJ</dd>
+
+      <dt>Engineering</dt>
+      <dd>Fusion 360 (CAD, FEA) · LCD stereolithography · PDMS soft lithography and microfluidic device fabrication</dd>
+
+      <dt>Laboratory</dt>
+      <dd>Mammalian cell culture (aseptic technique) · Molecular cloning · Protein extraction and purification · Western blotting · Immunofluorescence microscopy · HPLC · <span class="nw">GC–MS</span> and <span class="nw">LC–MS</span> · UV-Vis and fluorescence spectroscopy</dd>
+    </dl>
+  </section>
+
+  <!-- ═════════ LEADERSHIP & ENTREPRENEURSHIP ═════════ -->
+  <section>
+    <h2>Leadership &amp; Entrepreneurship</h2>
+
+    <div class="entry">
+      <div class="head"><h3>Independent Landscaping Business</h3><span class="when">2024 – 2026</span></div>
+      <p class="role">Founder and operator</p>
+      <ul>
+        <li>Founded and operated a recurring residential landscaping business over three summers, building and retaining a base of repeat residential clients.</li>
+        <li>Managed customer acquisition, pricing, scheduling, equipment, service delivery, and client retention.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="head"><h3>Longmeadow High School</h3><span class="when">2024 – 2025</span></div>
+      <p class="role">Assistant coach, track and field</p>
+      <ul>
+        <li>Assisted in coaching high-school athletes; planned practices, provided event-specific instruction, and coordinated meet-day execution.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═════════ ATHLETICS ═════════ -->
+  <section class="rows">
+    <h2>Athletics</h2>
+
+    <div class="head"><h3>Varsity Track and Field, McGill University</h3><span class="when">2023 – Present</span></div>
+    <div class="head"><h3>Varsity Lacrosse, McGill University</h3><span class="when">2025 – Present</span></div>
+  </section>
+
+  <!-- ═════════ RELEVANT COURSEWORK ═════════ -->
+  <section>
+    <h2>Relevant Coursework</h2>
+
+    <p class="plain">Biomolecular Engineering &amp; Protein Design · Cell Culture Engineering &amp; Bioprocess Scale-Up · Diagnostic Biodevice Design &amp; High-Throughput Screening · Transport Phenomena &amp; Mass Transfer · Biosignals &amp; Control Theory · Molecular, Cellular &amp; Tissue Biomechanics</p>
+  </section>
+
+</main>
+
+</body>
+</html>
