@@ -24,12 +24,17 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a2026'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EFK%3C/text%3E%3C/svg%3E">
 <style>
 /* Every size inside .sheet is in em, so the whole resume scales from one
-   font-size: 10pt on paper, larger on screens. */
-:root{--ink:#111;--muted:#444;--rule:#1a1a1a;--link:#0a5fff;color-scheme:light}
+   font-size: 10pt on paper, larger on screens.
+
+   Built to be read by applicant-tracking systems ("autofill from resume"):
+   one column in reading order, real text only, plain section names, and
+   no wide letter-spacing (it makes PDF text come out as "E D U C A T I O N"). */
+:root{--ink:#14181d;--body:#272c33;--muted:#5b626b;--line:#d3d9e0;--accent:#1a588f;color-scheme:light}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-body{margin:0;background:#e7e8e8;color:var(--ink);
+body{margin:0;background:#e7e8e8;color:var(--body);
      font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
 
 /* page chrome (screen only) */
 .bar{width:min(900px,100% - 32px);margin:0 auto;padding:18px 0 14px;
@@ -39,74 +44,90 @@ body{margin:0;background:#e7e8e8;color:var(--ink);
 .bar button{font:inherit;font-weight:600;color:#fff;background:#1a2026;border:0;border-radius:999px;
             padding:8px 16px;cursor:pointer}
 .bar button:hover{background:#000}
-.bar button:focus-visible,.bar a:focus-visible,.sheet a:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 
 /* the resume */
 .sheet{width:min(900px,100% - 32px);margin:0 auto 48px;background:#fff;
-       padding:52px 64px 56px;font-size:15px;line-height:1.42;
+       padding:56px 64px 60px;font-size:15px;line-height:1.42;
        box-shadow:0 1px 3px rgba(20,26,32,.14),0 8px 24px rgba(20,26,32,.07)}
-.sheet a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em}
+.sheet a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.16em;
+         text-decoration-color:rgba(26,88,143,.35)}
 
-h1{font-size:2.4em;line-height:1.1;font-weight:700;letter-spacing:-.015em;margin:0}
-/* Each separator sits in the gap before its item; the one starting a new
-   line falls outside the list's edge and is clipped, so wraps stay clean. */
-.contact{list-style:none;margin:.3em -4px 0;padding:2px 4px;font-size:.86em;color:#333;
-         display:flex;flex-wrap:wrap;column-gap:1.3em;overflow:hidden}
-.contact li{position:relative}
-.contact li::before{content:"|";color:#c4c4c4;position:absolute;left:-.82em}
+/* header: name, a short accent bar, contact details */
+h1{font-size:2.6em;line-height:1;font-weight:700;letter-spacing:-.02em;color:var(--ink);margin:0}
+h1::after{content:"";display:block;width:1.15em;margin-top:.2em;border-top:.09em solid var(--accent)}
+/* Each item starts with its separator. The list is shifted left by one
+   separator and the header clips it, so a separator that would start a line
+   is hidden. (No absolute positioning, clip-path or transforms in the resume:
+   they change the order text is written into the PDF, which is the order
+   resume parsers read it in.) */
+header{overflow:hidden;padding:4px;margin:-4px}
+.contact,.site{font-size:.9em;color:var(--body)}
+.contact{list-style:none;margin:.75em 0 0 -1.3em;padding:0;display:flex;flex-wrap:wrap}
+.contact li::before{content:"|";display:inline-block;width:1.3em;text-align:center;color:#b9c1ca}
+.contact li:first-child::before{visibility:hidden}
+.site{margin:.2em 0 0}
 .contact a[href^="mailto:"],.contact a[href^="tel:"]{color:inherit;text-decoration:none}
 .contact a[href^="mailto:"]:hover,.contact a[href^="tel:"]:hover{text-decoration:underline}
 
-h2{font-size:.8em;font-weight:700;text-transform:uppercase;letter-spacing:.24em;
-   margin:1.6em 0 .7em;padding-bottom:.4em;border-bottom:1px solid var(--rule)}
-.entry+.entry{margin-top:.75em}
-.head{display:flex;justify-content:space-between;align-items:baseline;gap:1em}
-h3{font-size:1.02em;font-weight:700;margin:0}
-.when{font-size:.94em;color:var(--muted);white-space:nowrap;text-align:right}
-.entry p{margin:.2em 0 0}
-.role{font-style:italic;color:var(--muted)}
-.entry ul{list-style:none;margin:.3em 0 0;padding:0}
-.entry li{position:relative;padding-left:.83em}
-.entry li+li{margin-top:.2em}
-.entry li::before{content:"·";position:absolute;left:0}
+/* section titles: small caps in the accent colour, hairline to the right */
+h2{display:flex;align-items:center;gap:.7em;font-size:.86em;font-weight:700;text-transform:uppercase;
+   letter-spacing:.06em;color:var(--accent);margin:1.7em 0 .65em}
+h2::after{content:"";flex:1;border-top:1px solid var(--line)}
 
-.skills{display:grid;grid-template-columns:8.3em 1fr;gap:.45em 0;margin:0}
-.skills dt{font-size:.76em;font-weight:700;text-transform:uppercase;letter-spacing:.14em;padding-top:.3em}
-.skills dd{margin:0}
+/* an entry: organisation and dates on one line, role underneath, bullets */
+.entry+.entry{margin-top:.95em}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:1.2em}
+h3{font-size:1.04em;font-weight:700;color:var(--ink);margin:0}
+.when{font-size:.93em;color:var(--muted);white-space:nowrap;text-align:right;
+      font-variant-numeric:tabular-nums}
+.entry p{margin:.15em 0 0}
+.role{color:var(--muted)}
+.role em{color:var(--body)}
+.entry ul{list-style:none;margin:.35em 0 0;padding:0}
+.entry li{padding-left:1em;text-indent:-1em}
+.entry li+li{margin-top:.22em}
+.entry li::before{content:"•";display:inline-block;box-sizing:border-box;width:1em;text-indent:0;padding-left:.1em;color:var(--accent)}
+.label{font-weight:700;color:var(--ink)}
+.skills p{margin:0}
+.skills p+p{margin-top:.3em}
 
-.rows .head+.head{margin-top:.2em}
-.rows h3{font-weight:400;font-size:1em}
-.plain{margin:0}
+.rows .head+.head{margin-top:.25em}
+.rows h3{font-weight:400;color:var(--body)}
 .nw{white-space:nowrap}
 
 /* phones: single column, dates under titles */
 @media screen and (max-width:640px){
   body{background:#fff}
   .bar{width:auto;padding:14px 18px 0}
-  .sheet{width:auto;margin:0;padding:22px 18px 40px;box-shadow:none;font-size:15.5px}
-  h1{font-size:2.1em}
-  .contact{margin-top:.5em;line-height:1.6}
+  .sheet{width:auto;margin:0;padding:24px 18px 40px;box-shadow:none;font-size:15.5px}
+  h1{font-size:2.2em}
+  .contact,.site{line-height:1.6}
   .head{flex-wrap:wrap;gap:0 1em}
   .when{text-align:left;flex-basis:100%;margin-top:.1em}
   .rows .head+.head{margin-top:.6em}
-  .skills{grid-template-columns:1fr;gap:0}
-  .skills dt{padding-top:.9em}
-  .skills dt:first-child{padding-top:0}
 }
 
-/* print / Save as PDF: one Letter page, no chrome */
+/* print / Save as PDF: one Letter page, no page chrome */
 @page{size:letter;margin:0}
 @media print{
   body{background:#fff}
   .bar{display:none}
-  .sheet{width:auto;margin:0;box-shadow:none;padding:.42in .62in .4in;font-size:10pt}
-  h1{font-size:2.3em}
-  header{margin-bottom:.35em}
-  h2{margin:.7em 0 .3em;padding-bottom:.3em}
-  .entry+.entry{margin-top:.55em}
-  .skills{gap:.25em 0}
+  .sheet{width:auto;margin:0;box-shadow:none;padding:.46in .6in .4in;font-size:10pt;line-height:1.36}
+  h1{font-size:2.45em}
+  .contact{margin-top:.65em}
+  .site{margin-top:.1em}
+  h2{margin:1.1em 0 .45em}
+  .entry+.entry{margin-top:.65em}
+  .skills p+p{margin-top:.2em}
 }
 </style>
+<script>
+// A saved PDF is named after the page title, so give it a tidy file name.
+(function(){var t=document.title;
+  addEventListener('beforeprint',function(){document.title='Frederic_Koran_Resume'});
+  addEventListener('afterprint',function(){document.title=t});})();
+</script>
 </head>
 <body>
 
@@ -117,8 +138,11 @@ h3{font-size:1.02em;font-weight:700;margin:0}
   2. Change any text between the tags. To add something, copy an existing
      block and paste it right below:
        · a bullet point  →  one <li>…</li> line
-       · a job or role   →  everything from <div class="entry"> to its </div>
-       · a skills row    →  one <dt>…</dt> line plus the <dd>…</dd> under it
+       · a job           →  everything from <div class="entry"> to its </div>
+                            (newest job first; dates go in <span class="when">)
+       · a skills row    →  one <p>…</p> line in Technical Skills
+     In the coursework and skills lists, items are separated by "&nbsp;· "
+     (the &nbsp; keeps a dot from starting a new line).
        · a whole section →  everything from <section> to its </section>
   3. Click "Commit changes". The live page updates within a minute or two.
   Use Ctrl/Cmd+P (print preview) after larger additions to check that it
@@ -140,8 +164,8 @@ h3{font-size:1.02em;font-weight:700;margin:0}
       <li><a href="tel:+14132410775">413-241-0775</a></li>
       <li>Longmeadow, MA</li>
       <li>Montreal, QC</li>
-      <li><a href="../">Project Portfolio</a></li>
     </ul>
+    <p class="site">Project Portfolio: <a href="https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/">fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio</a></p>
   </header>
 
   <!-- ═════════ EDUCATION ═════════ -->
@@ -150,60 +174,28 @@ h3{font-size:1.02em;font-weight:700;margin:0}
 
     <div class="entry">
       <div class="head"><h3>McGill University</h3><span class="when">Montreal, QC · Expected May 2028</span></div>
-      <p>B.Eng. in Bioengineering — Biomolecular &amp; Cellular Engineering</p>
+      <p class="role"><em>B.Eng. in Bioengineering — Biomolecular &amp; Cellular Engineering</em></p>
       <p>Minor in Economics · Fourth year of five · Major GPA 3.5/4.0</p>
+      <p><span class="label">Relevant Coursework:</span> Biomolecular Engineering &amp; Protein Design&nbsp;· Cell Culture Engineering &amp; Bioprocess Scale-Up&nbsp;· Diagnostic Biodevice Design &amp; High-Throughput Screening&nbsp;· Transport Phenomena &amp; Mass Transfer&nbsp;· Biosignals &amp; Control Theory&nbsp;· Molecular, Cellular &amp; Tissue Biomechanics</p>
     </div>
   </section>
 
-  <!-- ═════════ ENGINEERING EXPERIENCE ═════════ -->
+  <!-- ═════════ EXPERIENCE (newest first) ═════════ -->
   <section>
-    <h2>Engineering Experience</h2>
+    <h2>Experience</h2>
 
     <div class="entry">
       <div class="head"><h3>Ruffian — TipTopSpin</h3><span class="when">2026 – Present</span></div>
-      <p class="role">Product development · Student-run engineering startup</p>
+      <p class="role"><em>Product development</em> · Student-run engineering startup</p>
       <ul>
         <li>Designed and prototyped TipTopSpin, a forearm-mounted wrist trainer that resists ulnar-to-radial deviation with a rod-stabilized compression spring, preloaded by a threaded knob and slider for a 10× adjustable resistance range.</li>
         <li>Developed mechanical concepts and CAD in Fusion 360, iterating geometry with a student engineering team to balance ergonomics, range of motion, and manufacturability.</li>
       </ul>
     </div>
-  </section>
-
-  <!-- ═════════ SELECTED ENGINEERING PROJECTS ═════════ -->
-  <section>
-    <h2>Selected Engineering Projects</h2>
-
-    <div class="entry">
-      <div class="head"><h3>Bioengineering research and design projects</h3><span class="when">Full portfolio: <a href="../">view projects</a></span></div>
-      <ul>
-        <li>Projects spanning microfluidic diagnostics, bioglass implant coatings, controlled-release microbeads, computational protein design, and traction force microscopy.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ═════════ TECHNICAL SKILLS ═════════ -->
-  <section>
-    <h2>Technical Skills</h2>
-
-    <dl class="skills">
-      <dt>Computation</dt>
-      <dd>MATLAB · Python · JMP (design of experiments) · AlphaFold · ImageJ</dd>
-
-      <dt>Engineering</dt>
-      <dd>Fusion 360 (CAD, FEA) · LCD stereolithography · PDMS soft lithography and microfluidic device fabrication</dd>
-
-      <dt>Laboratory</dt>
-      <dd>Mammalian cell culture (aseptic technique) · Molecular cloning · Protein extraction and purification · Western blotting · Immunofluorescence microscopy · HPLC · <span class="nw">GC–MS</span> and <span class="nw">LC–MS</span> · UV-Vis and fluorescence spectroscopy</dd>
-    </dl>
-  </section>
-
-  <!-- ═════════ LEADERSHIP & ENTREPRENEURSHIP ═════════ -->
-  <section>
-    <h2>Leadership &amp; Entrepreneurship</h2>
 
     <div class="entry">
       <div class="head"><h3>Independent Landscaping Business</h3><span class="when">2024 – 2026</span></div>
-      <p class="role">Founder and operator</p>
+      <p class="role"><em>Founder and operator</em></p>
       <ul>
         <li>Founded and operated a recurring residential landscaping business over three summers, building and retaining a base of repeat residential clients.</li>
         <li>Managed customer acquisition, pricing, scheduling, equipment, service delivery, and client retention.</li>
@@ -212,10 +204,33 @@ h3{font-size:1.02em;font-weight:700;margin:0}
 
     <div class="entry">
       <div class="head"><h3>Longmeadow High School</h3><span class="when">2024 – 2025</span></div>
-      <p class="role">Assistant coach, track and field</p>
+      <p class="role"><em>Assistant coach, track and field</em></p>
       <ul>
         <li>Assisted in coaching high-school athletes; planned practices, provided event-specific instruction, and coordinated meet-day execution.</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ═════════ PROJECTS ═════════ -->
+  <section>
+    <h2>Selected Engineering Projects</h2>
+
+    <div class="entry">
+      <div class="head"><h3>Bioengineering research and design projects</h3><span class="when">Full portfolio: <a href="https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/">view projects</a></span></div>
+      <ul>
+        <li>Projects spanning microfluidic diagnostics, bioglass implant coatings, controlled-release microbeads, computational protein design, and traction force microscopy.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═════════ SKILLS ═════════ -->
+  <section>
+    <h2>Technical Skills</h2>
+
+    <div class="skills">
+      <p><span class="label">Computation:</span> MATLAB&nbsp;· Python&nbsp;· JMP (design of experiments)&nbsp;· AlphaFold&nbsp;· ImageJ</p>
+      <p><span class="label">Engineering:</span> Fusion 360 (CAD, FEA)&nbsp;· LCD stereolithography&nbsp;· PDMS soft lithography and microfluidic device fabrication</p>
+      <p><span class="label">Laboratory:</span> Mammalian cell culture (aseptic technique)&nbsp;· Molecular cloning&nbsp;· Protein extraction and purification&nbsp;· Western blotting&nbsp;· Immunofluorescence microscopy&nbsp;· HPLC&nbsp;· <span class="nw">GC–MS</span> and <span class="nw">LC–MS</span>&nbsp;· UV-Vis and fluorescence spectroscopy</p>
     </div>
   </section>
 
@@ -225,13 +240,6 @@ h3{font-size:1.02em;font-weight:700;margin:0}
 
     <div class="head"><h3>Varsity Track and Field, McGill University</h3><span class="when">2023 – Present</span></div>
     <div class="head"><h3>Varsity Lacrosse, McGill University</h3><span class="when">2025 – Present</span></div>
-  </section>
-
-  <!-- ═════════ RELEVANT COURSEWORK ═════════ -->
-  <section>
-    <h2>Relevant Coursework</h2>
-
-    <p class="plain">Biomolecular Engineering &amp; Protein Design · Cell Culture Engineering &amp; Bioprocess Scale-Up · Diagnostic Biodevice Design &amp; High-Throughput Screening · Transport Phenomena &amp; Mass Transfer · Biosignals &amp; Control Theory · Molecular, Cellular &amp; Tissue Biomechanics</p>
   </section>
 
 </main>
