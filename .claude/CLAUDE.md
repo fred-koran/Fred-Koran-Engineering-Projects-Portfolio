@@ -3,7 +3,7 @@
 GitHub Pages site, published from `main`:
 https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/
 
-- `index.html`: the engineering project portfolio (16 projects). About 1.2 MB of
+- `index.html`: the engineering project portfolio (18 projects). About 1.2 MB of
   embedded images and fonts, so don't read it directly. Use
   `python3 .claude/skills/tailor-resume/portfolio.py list` or `… portfolio.py <N>`
   to get a project's text.

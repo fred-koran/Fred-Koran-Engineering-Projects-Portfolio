@@ -31,7 +31,8 @@ under "Learned from Fred" at the bottom, with the date, in the same session.
 - Course codes seen in the portfolio: BIEN 219 (structural case studies), BIEN 220 (group
   design project), BIEN 290 (lab modules: calibration, DOE, mechanical testing), BIEN 350
   (biosignals, MATLAB), BIEN 390 (lab modules: nanomaterials, microfluidic fabrication,
-  lateral flow assays)
+  lateral flow assays), WCOM 206 (written research proposal: P08), SEAD 510 (energy
+  analysis: P14)
 
 ## Experience (wording is Fred's; keep it unless a job calls for re-ordering or trimming)
 
@@ -218,8 +219,29 @@ for the project's work, show the team size on the role line, and never write "le
   - Built absorbance and fluorescence calibration curves and solved unknown
     concentrations within the validated linear range, avoiding inner-filter error.
 
-### P08 · In-situ substrate stiffness calibration for traction force microscopy
+### P08 · Tipping the Needle: dissolving microneedle patch to replace daily injections (design proposal)
 - Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p08
+- When: September–October 2026 · WCOM 206 · Design proposal · **Sole-authored**
+- Domain: drug delivery, transdermal delivery, medical device design, peptide therapeutics,
+  osteoporosis, technical and scientific writing
+- Methods/tools: literature-based design (written proposal plus a one-slide pitch); cone-geometry
+  calculation of the drug left outside the skin at 80% insertion; tip-loaded two-layer dissolving
+  needle concept; four evaluation criteria (delivered dose and consistency, needle fracture force
+  against insertion force, application force within ~20 N, teriparatide stability)
+- Results: proposed a 14 × 14 array (196 conical needles, 700 µm tall, 250 µm base, 600 µm
+  centre spacing) with drug in the distal four-fifths of each needle; showed uniform loading leaves
+  48.8% of each needle's volume above the skin at 80% insertion; ~0.1 N per needle at 20 N
+- Ready bullets:
+  - Proposed a tip-loaded dissolving microneedle patch to replace daily teriparatide injections
+    for osteoporosis, specifying a 196-needle array (700 µm tall, 600 µm spacing) from published
+    delivery data.
+  - Showed by cone geometry that uniform loading leaves 48.8% of each needle's drug above the
+    skin at 80% insertion, and set four evaluation criteria: delivered dose, strength margin,
+    application force and drug stability.
+- Don't claim: fabrication, testing or delivery data (it is a written proposal).
+
+### P09 · In-situ substrate stiffness calibration for traction force microscopy
+- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p09
 - When: April 2026 · Method development · Three-person team
 - Domain: mechanobiology, biophysics, imaging methods, error analysis, inverse problems
 - Methods/tools: critical review of a foundational TFM paper; proposed magnetic-bead
@@ -234,8 +256,8 @@ for the project's work, show the team size on the role line, and never write "le
     bounding achievable error at 1–10% and setting the method's operating range.
 - Don't claim: experimental validation (it is a method design and analysis).
 
-### P09 · Reduced-alphabet redesign of a TIM barrel protein (20 → 5 amino acids)
-- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p09
+### P10 · Reduced-alphabet redesign of a TIM barrel protein (20 → 5 amino acids)
+- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p10
 - When: Fall 2025 · Computational protein design · **Sole-authored**
 - Domain: protein engineering, computational biology, de novo design, structural biology
 - Methods/tools: residue-by-residue redesign of a 247-residue TIM barrel at 15 and then 5
@@ -252,8 +274,8 @@ for the project's work, show the team size on the role line, and never write "le
     every substitution against burial, charge and catalytic constraints.
 - Don't claim: expression, stability or activity data (designs are predicted, not tested).
 
-### P10 · Bilayer magnesium-reinforced bioglass implant coating
-- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p10
+### P11 · Bilayer magnesium-reinforced bioglass implant coating
+- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p11
 - When: Fall 2024 · Biomaterials design study · Four-person team
 - Domain: orthopedic implants, biomaterials, medical device design inputs/outputs,
   controlled release, cost analysis
@@ -271,8 +293,8 @@ for the project's work, show the team size on the role line, and never write "le
     materials at ~$278 against an $8,000–13,000 implant.
 - Don't claim: fabrication or testing (it is a literature-supported specification).
 
-### P11 · Bacterial self-healing concrete: FEA of cracked vs healed prism
-- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p11
+### P12 · Bacterial self-healing concrete: FEA of cracked vs healed prism
+- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p12
 - When: Fall 2024 · BIEN 220 group design project · Five-person team
 - Domain: engineered living materials, microencapsulation, FEA, structural modelling
 - Methods/tools: *B. subtilis* spore + urea/Ca(NO₃)₂ in pH-triggered urea-formaldehyde
@@ -288,8 +310,8 @@ for the project's work, show the team size on the role line, and never write "le
     releasing *Bacillus subtilis* spores for calcium carbonate precipitation.
 - Don't claim: lab-made concrete or measured healing (modelling and design from literature).
 
-### P12 · Biosignal analysis: EEG and cerebral hemodynamics (MATLAB)
-- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p12
+### P13 · Biosignal analysis: EEG and cerebral hemodynamics (MATLAB)
+- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p13
 - When: date not stated in the portfolio (ask Fred) · BIEN 350 · Four-person team
 - Domain: signal processing, neuroengineering, physiological modelling, data analysis
 - Methods/tools: MATLAB; Welch vs periodogram; 5-band 2nd-order Butterworth filter bank
@@ -307,8 +329,30 @@ for the project's work, show the team size on the role line, and never write "le
     transfer-function model (r = 0.968, 0.065 s lag) and identified where a linear model
     fails.
 
-### P13 · Published chapter: "Unlocking Locust Survival: A Chemical Analysis of Locusts"
-- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p13 ·
+### P14 · Energy Footprint: seven-day personal energy and carbon audit, annualized
+- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p14
+- When: September–October 2026 · SEAD 510 · Energy audit · **Sole-authored**
+- Domain: energy analysis, sustainability, carbon accounting and GHG emissions, building energy
+  modelling, embodied (life-cycle) energy, cost analysis
+- Methods/tools: daily activity and appliance log (Sep 10–16, 2026); building heat modelled from
+  utility bills (Hydro-Québec Rate D), heating degree days and heat loss coefficients; McGill
+  building energy allocated per occupant-hour from the campus GHG inventory; emission factors
+  (Canada National Inventory Report, ECCC, US EPA eGRID); embodied food energy (production plus
+  transport); cost and human-labour equivalence
+- Results: 273 kWh in the audit week (39.0 kWh/day); 22,700 kWh/yr annualized (62.2 kWh/day);
+  3.76 t CO₂/yr, 69% from car trips and flights (45% of energy); Montreal residence 24% of energy
+  but 0.3% of CO₂; beef ~15× the energy per food calorie of potatoes
+- Ready bullets:
+  - Audited a week of personal energy use across buildings, travel and appliances and annualized
+    it to 22,700 kWh and 3.76 t CO₂, modelling building heat from utility bills, heating degree
+    days and McGill's campus energy inventory.
+  - Showed that grid carbon intensity, not energy use, drove emissions: the Montreal residence was
+    24% of energy but 0.3% of CO₂, while car trips and flights were 45% of energy and 69% of CO₂.
+- Don't claim: metered measurements (building and appliance energy are modelled from bills,
+  ratings and inventories).
+
+### P15 · Published chapter: "Unlocking Locust Survival: A Chemical Analysis of Locusts"
+- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p15 ·
   published at bioengineering.hyperbook.mcgill.ca/unlocking-locust-survival-a-chemical-analysis-of-locusts
 - When: 2025 · Literature review · Co-authored, four authors (Koran, F., Leader, C.,
   Stoilova, A., & Weng, A.), McGill Bioengineering Hyperbook
@@ -321,8 +365,8 @@ for the project's work, show the team size on the role line, and never write "le
   Hyperbook*, McGill University.
 - Don't claim: original experiments (it is a review).
 
-### P14 · N370S glucocerebrosidase mutation and Gaucher disease (structural case study)
-- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p14
+### P16 · N370S glucocerebrosidase mutation and Gaucher disease (structural case study)
+- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p16
 - When: date not stated (ask Fred) · BIEN 219
 - Domain: structural biology, disease mechanism, enzyme therapy, biopharma
 - Methods/tools: PDB structure comparison (1OGS wild type vs 3KE0 N370S)
@@ -332,8 +376,8 @@ for the project's work, show the team size on the role line, and never write "le
   - Compared wild-type and N370S glucocerebrosidase crystal structures (PDB 1OGS, 3KE0) to
     explain how a mutation 13 Å from the active site causes type 1 Gaucher disease.
 
-### P15 · Insulin structural analysis (PDB 4INS)
-- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p15
+### P17 · Insulin structural analysis (PDB 4INS)
+- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p17
 - When: date not stated (ask Fred) · BIEN 219
 - Domain: structural biology, protein therapeutics, diabetes
 - Results: traced disulfide bridges, the hinge-like receptor binding surface (Phe-B24) and
@@ -342,8 +386,8 @@ for the project's work, show the team size on the role line, and never write "le
   - Analyzed the 1.5 Å insulin crystal structure (PDB 4INS), linking disulfide bonding,
     receptor-binding conformational change and zinc hexamer storage to function.
 
-### P16 · Nanopore sequencing signal and sensing limits (analytical derivation)
-- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p16
+### P18 · Nanopore sequencing signal and sensing limits (analytical derivation)
+- Link: https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/#p18
 - When: date not stated (ask Fred) · Analytical derivation · Four-person team
 - Domain: biosensors, sequencing, electrochemistry/biophysics, modelling
 - Methods/tools: channel + access resistance model from pore geometry and electrolyte
@@ -361,20 +405,21 @@ for the project's work, show the team size on the role line, and never write "le
 
 | The job mentions… | Strongest evidence |
 |---|---|
-| medical devices, point-of-care, diagnostics, IVD | P01, P03, P02, P16, P10 |
+| medical devices, point-of-care, diagnostics, IVD | P01, P03, P02, P18, P11, P08 |
 | microfluidics, microfabrication, soft lithography, 3D printing | P02, P01 (+ Fusion 360 / SLA skills) |
-| mechanical design, CAD, prototyping, product development | Ruffian/TipTopSpin, P01, P11, P10 |
-| FEA, mechanical testing, materials characterization | P11, P05, P04, P10 |
-| biomaterials, implants, tissue engineering | P10, P06, P05, P04 |
-| drug delivery, formulation, encapsulation | P06, P10 (pH-triggered release) |
+| mechanical design, CAD, prototyping, product development | Ruffian/TipTopSpin, P01, P12, P11 |
+| FEA, mechanical testing, materials characterization | P12, P05, P04, P11 |
+| biomaterials, implants, tissue engineering | P11, P06, P05, P04 |
+| drug delivery, formulation, encapsulation | P08, P06, P11 (pH-triggered release) |
 | DOE, statistics, JMP, process optimization | P06, P07 |
 | QA/QC, calibration, metrology, GLP, test method validation | P07, P05 |
 | analytical chemistry, spectroscopy, assay development | P07, P04, P03, P06 |
-| protein engineering, computational biology, structural biology | P09, P14, P15 |
-| signal processing, MATLAB, data analysis, neuro | P12, P08 |
-| mechanobiology, biophysics, imaging, modelling | P08, P16, P12 |
-| scientific writing, research, publications | P13, P08 (critical review) |
-| design controls, requirements, cost analysis | P10, P01 |
+| protein engineering, computational biology, structural biology | P10, P16, P17 |
+| signal processing, MATLAB, data analysis, neuro | P13, P09 |
+| mechanobiology, biophysics, imaging, modelling | P09, P18, P13 |
+| scientific writing, research, publications | P15, P08 (written proposal), P09 (critical review) |
+| design controls, requirements, cost analysis | P11, P01 |
+| sustainability, energy, carbon accounting, environmental | P14 |
 | business, operations, customer-facing work | Landscaping business |
 | leadership, coaching, teamwork | Assistant coach, team projects (3–5 people) |
 
@@ -384,8 +429,8 @@ for the project's work, show the team size on the role line, and never write "le
 - Internship or co-op availability windows
 - Overall GPA (only the major GPA, 3.5/4.0, is known)
 - Fred's individual role on each team project
-- Dates for P12, P14, P15 and P16
-- The structure-prediction tool used in P09
+- Dates for P13, P16, P17 and P18
+- The structure-prediction tool used in P10
 - Ruffian details beyond the resume (team size, outcomes, testing)
 - Languages, certifications, lab safety training, other software
 
@@ -402,3 +447,7 @@ for the project's work, show the team size on the role line, and never write "le
 
 - 2026-10-11: Job months. Ruffian Apr 2026 – Aug 2026 (no longer current), landscaping
   Apr 2024 – Aug 2026, assistant coach Apr 2024 – Jun 2025.
+- 2026-10-11: Two new portfolio projects, both September–October 2026 and sole-authored: the
+  WCOM 206 microneedle patch proposal ("Tipping the Needle", P08) and the SEAD 510 energy
+  footprint audit (P14). Adding them renumbered the portfolio: old P08–P12 are now P09–P13 and
+  old P13–P16 are now P15–P18.
