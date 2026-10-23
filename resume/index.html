@@ -41,7 +41,7 @@ a{color:inherit}
 :focus-visible{outline:2px solid #111;outline-offset:3px}
 
 /* page chrome (screen only) */
-.bar{width:min(900px,100% - 32px);margin:0 auto;padding:18px 0 14px;
+.bar{width:min(918px,100% - 32px);margin:0 auto;padding:18px 0 14px;
      display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:14px}
 .bar a{color:#111;text-decoration:none}
 .bar a:hover{text-decoration:underline}
@@ -49,9 +49,11 @@ a{color:inherit}
             padding:8px 16px;cursor:pointer}
 .bar button:hover{background:#000}
 
-/* the resume; --px is the side margin */
-.sheet{--px:64px;width:min(900px,100% - 32px);margin:0 auto 48px;background:#fff;
-       padding:2.6em var(--px) 60px;font-size:15px;line-height:1.38;
+/* the resume; --px is the side margin. On wide screens the sheet keeps the
+   paper's proportions (8.5in wide with .54in margins, in em), so lines wrap
+   exactly as they do in the PDF. */
+.sheet{--px:3.9em;width:min(61.2em,100% - 32px);margin:0 auto 48px;background:#fff;
+       padding:3.1em var(--px) 3em;font-size:15px;line-height:1.36;
        box-shadow:0 1px 3px rgba(0,0,0,.14),0 12px 32px rgba(0,0,0,.08)}
 .sheet a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.14em}
 
@@ -98,6 +100,9 @@ h3{font-size:1.09em;font-weight:700;color:var(--ink);margin:0}
 .sheet h3 a{color:inherit;text-decoration:none}
 .head .meta{font-weight:400;color:var(--muted);font-size:.92em}
 .nw{white-space:nowrap}
+/* line breaks that match Fred's PDF; kept on paper and on screens wide enough for the
+   full-size sheet, dropped on narrower screens where the text wraps freely */
+@media screen and (max-width:949px){.pb{display:none}}
 
 /* phones: single column, dates under titles */
 @media screen and (max-width:640px){
@@ -175,7 +180,7 @@ h3{font-size:1.09em;font-weight:700;color:var(--ink);margin:0}
       <div class="head"><h3>McGill University</h3><span class="when"><span class="at">Montreal, QC</span> <span class="k">&nbsp;·&nbsp;</span> Expected May 2028</span></div>
       <p class="degree">B.Eng. in Bioengineering</p>
       <p>Minor in Economics · Fourth year of five · Major GPA 3.5/4.0</p>
-      <p><span class="label">Relevant Coursework:</span> Biomolecular Engineering &amp; Protein Design&nbsp;· Cell Culture Engineering &amp; Bioprocess <span class="nw">Scale-Up</span>&nbsp;· Diagnostic Biodevice Design &amp; <span class="nw">High-Throughput</span> Screening&nbsp;· Transport Phenomena &amp; Mass Transfer&nbsp;·<br>Biosignals &amp; Control Theory&nbsp;· Molecular, Cellular &amp; Tissue Biomechanics</p>
+      <p><span class="label">Relevant Coursework:</span> Biomolecular Engineering &amp; Protein Design&nbsp;· Cell Culture Engineering &amp; Bioprocess <span class="nw">Scale-Up</span>&nbsp;· Diagnostic Biodevice Design &amp; <span class="nw">High-Throughput</span> Screening&nbsp;· Transport Phenomena &amp; Mass Transfer&nbsp;· <br class="pb">Biosignals &amp; Control Theory&nbsp;· Molecular, Cellular &amp; Tissue Biomechanics</p>
     </div>
   </section>
 
@@ -228,9 +233,9 @@ h3{font-size:1.09em;font-weight:700;color:var(--ink);margin:0}
     <h2>Technical Skills</h2>
 
     <div class="skills">
-      <p><span class="label">Computation:</span> MATLAB&nbsp;· Python&nbsp;· JMP (design of experiments)&nbsp;· AlphaFold&nbsp;· ImageJ</p>
+      <p><span class="label">Computation:</span> MATLAB&nbsp;· Python&nbsp;· JMP (design of experiments)&nbsp;· AlphaFold&nbsp;· ImageJ&nbsp;· <span class="nw">Excel (data analysis)</span>&nbsp;· PowerPoint</p>
       <p><span class="label">Engineering:</span> Fusion 360 (CAD, FEA)&nbsp;· LCD stereolithography&nbsp;· PDMS soft lithography and microfluidic device fabrication</p>
-      <p><span class="label">Laboratory:</span> Mammalian cell culture (aseptic technique)&nbsp;· Molecular cloning&nbsp;· Protein extraction and purification&nbsp;·<br>Western blotting&nbsp;· Immunofluorescence microscopy&nbsp;· HPLC&nbsp;· <span class="nw">GC–MS</span> and <span class="nw">LC–MS</span>&nbsp;· <span class="nw">UV-Vis</span> and fluorescence spectroscopy</p>
+      <p><span class="label">Laboratory:</span> Mammalian cell culture (aseptic technique)&nbsp;· Molecular cloning&nbsp;· Protein extraction and purification&nbsp;· <br class="pb">Western blotting&nbsp;· Immunofluorescence microscopy&nbsp;· HPLC&nbsp;· <span class="nw">GC–MS</span> and <span class="nw">LC–MS</span>&nbsp;· <span class="nw">UV-Vis</span> and fluorescence spectroscopy</p>
     </div>
   </section>
 
