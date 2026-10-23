@@ -7,6 +7,12 @@ https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/
   embedded images and fonts, so don't read it directly. Use
   `python3 .claude/skills/tailor-resume/portfolio.py list` or `… portfolio.py <N>`
   to get a project's text.
+  The same file is printed to `Frederic-Koran-Engineering-Portfolio.pdf`. Its
+  screen look lives in `<style id="web-layer">` and the last `<script>`: on screen
+  the home page is the cover and contents and each project is its own page (`#p05`
+  opens project 05); print ignores all of it and stays the paginated document.
+  Don't split visible text into new elements there, or the PDF's copyable text
+  changes.
 - `resume/index.html`: the master one-page resume. Fred's PDF comes from its
   "Save as PDF" button (browser print to Letter).
 - `resume/<slug>/index.html`: copies tailored to specific jobs.
@@ -22,8 +28,10 @@ https://fred-koran.github.io/Fred-Koran-Engineering-Projects-Portfolio/
 - Verify every change with
   `node .claude/skills/tailor-resume/check.js <file>`: one page with both font
   setups, and the PDF text in reading order.
-- The design (blue header band with sheen, blue section squares, date pills) is
-  approved. Don't restyle unless Fred asks.
+- The design is approved and matches Fred's own PDF (Oct 2026): black and white,
+  name and contact line over a rule, caps section titles with a grey hairline, job
+  title and date on one line with the organisation in italics below. Don't restyle
+  unless Fred asks.
 
 ## Working with Fred
 
