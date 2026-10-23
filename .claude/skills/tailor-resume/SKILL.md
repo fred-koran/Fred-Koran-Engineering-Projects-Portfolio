@@ -114,8 +114,7 @@ Use this inside the Projects section, one block per project. The styles for it
 - Title: a short descriptive name (not the portfolio's full title), linked to the
   write-up (`#p01` to `#p18`).
 - `.meta`: team size ("four-person team", "sole-authored") or the course ("BIEN 290").
-- Date pill: the portfolio's date in short form ("Feb 2026", "Sep – Oct 2025",
-  "Winter 2026"). If the portfolio gives no date, leave the pill out rather than
-  guessing.
+- Date: the portfolio's date in short form ("Feb 2026", "Sep – Oct 2025",
+  "Winter 2026"). If the portfolio gives no date, leave it out rather than guessing.
 - One or two bullets, each with a concrete number from the write-up where possible.
 - Rename the section heading to "Projects" or keep "Selected Engineering Projects".

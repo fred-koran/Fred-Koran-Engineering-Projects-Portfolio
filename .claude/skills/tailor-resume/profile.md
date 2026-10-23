@@ -36,25 +36,27 @@ under "Learned from Fred" at the bottom, with the date, in the same session.
 
 ## Experience (wording is Fred's; keep it unless a job calls for re-ordering or trimming)
 
-**Ruffian — TipTopSpin** · Apr 2026 – Aug 2026
-*Product development* · Student-run engineering startup
+**Product Development Engineer** · Apr 2026 – Aug 2026
+*Ruffian — TipTopSpin* · Student-run engineering startup
 - Designed and prototyped TipTopSpin, a forearm-mounted wrist trainer that resists
   ulnar-to-radial deviation with a rod-stabilized compression spring, preloaded by a
   threaded knob and slider for a 10× adjustable resistance range.
 - Developed mechanical concepts and CAD in Fusion 360, iterating geometry with a student
   engineering team to balance ergonomics, range of motion, and manufacturability.
 
-**Independent Landscaping Business** · Apr 2024 – Aug 2026
-*Founder and operator*
-- Founded and operated a recurring residential landscaping business over three summers,
-  building and retaining a base of repeat residential clients.
-- Managed customer acquisition, pricing, scheduling, equipment, service delivery, and
-  client retention.
+**Founder and Operator** · Apr 2024 – Aug 2026
+*Independent Landscaping Business*
+- Founded a residential landscaping business and doubled profit from $5K in 2024 to $10K
+  in 2025.
+- Served ~20 residential clients and retained 7 as repeat clients every summer; managed
+  customer acquisition, pricing, scheduling, equipment, and service delivery.
 
-**Longmeadow High School** · Apr 2024 – Jun 2025
-*Assistant coach, track and field*
-- Assisted in coaching high-school athletes; planned practices, provided event-specific
-  instruction, and coordinated meet-day execution.
+**Track and Field Assistant Coach** · Apr 2024 – Jun 2025
+*Longmeadow High School*
+- Personally coached three athletes to podium finishes at the conference championship,
+  where the team placed first.
+- Planned practices, provided event-specific instruction, and coordinated meet-day
+  execution.
 
 ## Technical skills (as on the resume)
 
@@ -437,8 +439,8 @@ for the project's work, show the team size on the role line, and never write "le
 ## Fred's preferences
 
 - One Letter page, built to be read by applicant-tracking systems (see SKILL.md rules).
-- Keep the current design: light-blue header band with sheen, blue section squares, date
-  pills. Tailoring changes content, not styling.
+- Keep the current design (black and white, matching Fred's own PDF of Oct 2026). Tailoring
+  changes content, not styling.
 - Dates as "Apr 2026 – Aug 2026"; years only where months are unknown.
 - Don't change information: tailoring selects, orders and trims; new facts come from Fred.
 - Fred reviews a preview, then usually says "merge" to publish.
@@ -447,6 +449,12 @@ for the project's work, show the team size on the role line, and never write "le
 
 - 2026-10-11: Job months. Ruffian Apr 2026 – Aug 2026 (no longer current), landscaping
   Apr 2024 – Aug 2026, assistant coach Apr 2024 – Jun 2025.
+- 2026-10-22: New master resume from Fred's PDF. Job titles lead each entry (Product
+  Development Engineer at Ruffian; Founder and Operator; Track and Field Assistant Coach).
+  New facts: landscaping profit doubled from $5K (2024) to $10K (2025), ~20 residential
+  clients with 7 repeat every summer; coached three athletes to conference-championship
+  podiums, team placed first. Header now lists only the iCloud email, phone, Longmeadow MA
+  and https://fred-koran.github.io; degree line is "B.Eng. in Bioengineering".
 - 2026-10-11: Two new portfolio projects, both September–October 2026 and sole-authored: the
   WCOM 206 microneedle patch proposal ("Tipping the Needle", P08) and the SEAD 510 energy
   footprint audit (P14). Adding them renumbered the portfolio: old P08–P12 are now P09–P13 and
