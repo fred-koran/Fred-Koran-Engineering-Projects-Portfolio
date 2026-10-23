@@ -60,7 +60,7 @@ under "Learned from Fred" at the bottom, with the date, in the same session.
 
 ## Technical skills (as on the resume)
 
-- **Computation:** MATLAB · Python · JMP (design of experiments) · AlphaFold · ImageJ
+- **Computation:** MATLAB · Python · JMP (design of experiments) · AlphaFold · ImageJ · Excel (data analysis) · PowerPoint
 - **Engineering:** Fusion 360 (CAD, FEA) · LCD stereolithography · PDMS soft lithography
   and microfluidic device fabrication
 - **Laboratory:** Mammalian cell culture (aseptic technique) · Molecular cloning · Protein
@@ -449,6 +449,7 @@ for the project's work, show the team size on the role line, and never write "le
 
 - 2026-10-11: Job months. Ruffian Apr 2026 – Aug 2026 (no longer current), landscaping
   Apr 2024 – Aug 2026, assistant coach Apr 2024 – Jun 2025.
+- 2026-10-22: Fred added Excel (data analysis) and PowerPoint to his skills.
 - 2026-10-22: New master resume from Fred's PDF. Job titles lead each entry (Product
   Development Engineer at Ruffian; Founder and Operator; Track and Field Assistant Coach).
   New facts: landscaping profit doubled from $5K (2024) to $10K (2025), ~20 residential
